@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="6style.css">
+    <title>Entry6</title>
+    <link rel="icon" href="0.png" type="image/png">
+
+</head>
+
+
+<header>
+    <a id="home" href="file:///Users/yoojeongseo/Desktop/serena_c1if24/entries/Brithday/entry1/serenahome.html">[SERENA HOME]</a>
+</header>
+
+
+<body>
+
+    <h1 class="title">P L A C E</h1>
+    <a href="file:///Users/yoojeongseo/Desktop/serena_c1if24/entries/Brithday/entry5/entry5.html" class="back-button">&#8592; [ B A C K ]</a>
+    <a href="file:///Users/yoojeongseo/Desktop/serena_c1if24/entries/Brithday/entry7/entry7.html" class="next-button">[ N E X T ] &#8594;</a> 
+
+    <div class="container">
+        <h1>Enter a number<br> <br> 1~21</h1>
+        <input type="text" id="inputNumber" placeholder="Enter number" pattern="[0-9]*" />
+        <div id="textBox" class="text-box"></div>
+    </div>
+
+    <script>
+        const textArray = {
+            1: "Korea-Seoul ",
+            2: "Korea-Seoul ",
+            3: "Korea-Yong-In ",
+            4: "Korea-Yong-In",
+            5: "Korea-Yong-In",
+            6: "Korea-Yong-Ink",
+            7: "Korea-Yong-Inn",
+            8: "Korea-Yong-In",
+            9: "Korea-Yong-In",
+            10: "Korea-Yong-In",
+            11: "Korea-Yong-In",
+            12: "Korea-Seoul",
+            13: "Korea-Anseong",
+            14: "Korea-Anseong",
+            15: "Korea-Anseong",
+            16: "Korea-Anseong",
+            17: "Korea-Anseong",
+            18: "Korea-Anseong",
+            19: "Korea-Seoul",
+            20: "USA-New York",
+            21: "USA-New York"
+        };
+
+        // 실시간으로 텍스트를 업데이트하는 함수
+        function updateText() {
+            const inputNumber = document.getElementById("inputNumber").value;
+            const textBox = document.getElementById("textBox");
+
+            // 숫자가 비었을 때
+            if (inputNumber === "") {
+                textBox.textContent = "Please enter a number between 1 and 21.";
+                textBox.style.color = "white";  // 기본 색상
+            } 
+            // 숫자가 유효한 경우
+            else if (inputNumber >= 1 && inputNumber <= 21) {
+                textBox.textContent = textArray[inputNumber];
+                textBox.style.color = "white"; // 정상 텍스트일 때 색상 설정
+            } 
+            // 숫자가 유효하지 않은 경우
+            else {
+                textBox.textContent = "E R R O R";
+                textBox.style.color = "red"; // 에러 메시지 색상
+            }
+        }
+
+        // "Enter" 키가 눌릴 때 텍스트 업데이트
+        document.getElementById("inputNumber").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                updateText();  // Enter 키를 누르면 텍스트 업데이트
+                document.getElementById("inputNumber").value = "";  // 입력 필드 비우기
+            }
+        });
+
+    </script>
+</body>
+</html>

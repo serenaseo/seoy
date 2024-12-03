@@ -1,0 +1,186 @@
+@import url('https://use.typekit.net/chq6xxm.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+header { 
+    z-index: 100;
+    display: flex;                  /* Changed to flex for horizontal centering */
+    justify-content: center;        /* Centers content horizontally */
+    width: 100%;
+    font-size: 1.5vh;
+    top: 0;
+    position: fixed;                /* Fixed to top */
+    left: 50%;                      /* Centralize header */
+    transform: translateX(-50%);    /* Fine-tuned center */
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.253);
+    text-decoration: none;
+}
+
+
+body {
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white; /* Default text color */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to the top */
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 60px; /* Ensure the container starts lower */
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 52%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+    animation: fadeEffect 5s infinite;
+    color: white;
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+/* Back Button */
+.back-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px;
+    left: 40px;
+    margin: 0;
+    width: 200px;
+    word-wrap: break-word;
+    line-height: 1.2;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 10001; /* Ensure it is above the images */
+}
+
+/* Next Button */
+.next-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 60px;
+    left: 1570px;
+    margin: 0;
+    width: 200px;
+    word-wrap: break-word;
+    line-height: 1.2;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 10001; /* Ensure it is above the images */
+}
+
+/* Ensure proper hover effect */
+.back-button:hover,
+.next-button:hover {
+    color: transparent;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #0e0e0e;
+    color: white;
+    overflow: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 300vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.945);
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeEffect 18s infinite;
+}
+
+.image:nth-child(2) {
+    animation-delay: 2s;
+}
+.image:nth-child(3) {
+    animation-delay: 4s;
+}
+.image:nth-child(4) {
+    animation-delay: 6s;
+}
+.image:nth-child(5) {
+    animation-delay: 8s;
+}
+.image:nth-child(6) {
+    animation-delay: 10s;
+}
+.image:nth-child(7) {
+    animation-delay: 12s;
+}
+.image:nth-child(8) {
+    animation-delay: 14s;
+}
+.image:nth-child(9) {
+    animation-delay: 16s;
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.text {
+    position: absolute;
+    top: 18%; /* Adjust top position */
+    left: 52%; /* Center horizontally */
+    transform: translateX(-50%);
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;   
+    font-size: 25px;
+    text-align: center;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.328);
+    white-space: nowrap;
+}

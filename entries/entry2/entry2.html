@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Reflection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="2style.css">
+  <link rel="icon" href="0.png" type="image/png">
+
+</head>
+
+<header>
+  <a id="home" href="file:///Users/yoojeongseo/Desktop/serena_c1if24/entries/Brithday/entry1/serenahome.html">[SERENA HOME]</a>
+  </header>
+
+<body>
+  <h1 class= title > A P R I L </h1>
+
+
+  <div class="typewriter-container">
+    <p class="typewriter" >
+      A birthday, to me, might mean more than just a celebration. It’s a personal milestone.  <br>
+      A moment to pause and reflect on how far I’ve come, where I am now, and what’s ahead.<br>
+       It’s a day to honor my growth, both the challenges and the triumphs, and to appreciate the person I am becoming. <br>
+        Birthdays are like checkpoints in your life journey, reminding me to stay grounded in simplicity and truth, while still dreaming big for the future. <br>
+        It’s also a chance to reconnect with myself, appreciate the little things, and set new intentions for the year ahead.
+    </p>
+  </div>
+  <a href="file:///Users/yoojeongseo/Desktop/serena_c1if24/entries/Brithday/entry1/entry1.html" class="back-button">&#8592; [ B A C K ]</a>
+  <a href="file:///Users/yoojeongseo/Desktop/serena_c1if24/entries/Brithday/entry3/entry3.html"class="next-button"> [ N E X T ] &#8594; </a>    
+
+<!-- 이미지 숨기기 -->
+<div id="scrollImage" class="hidden-image">
+  <img src="img5/e2-1.jpg" alt="Revealed Image" />
+  <img src="img5/e2-2.jpg" alt="Revealed Image" />
+  <img src="img5/e2-1.jpg" alt="Revealed Image" />
+  <img src="img5/e2-2.jpg" alt="Revealed Image" />
+
+
+</div>
+<h2= class= "quote"> A Timeless Visual Odyssey Through Two Decades</h2>
+
+<script>
+  window.addEventListener('scroll', function() {
+      var image = document.getElementById('scrollImage');
+      var scrollPosition = window.scrollY + window.innerHeight;
+      var imagePosition = image.offsetTop;
+
+      if (scrollPosition > imagePosition) {
+          image.classList.remove('hidden'); // 이미지 표시
+          image.classList.add('visible');
+      } else {
+          image.classList.remove('visible');
+          image.classList.add('hidden'); // 이미지 숨기기
+      }
+  });
+</script>
+
+
+
+
+
+</body>
+
+
+
+</html>

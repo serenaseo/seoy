@@ -1,0 +1,346 @@
+@import url('https://use.typekit.net/chq6xxm.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+header { 
+    z-index: 100;
+    display: flex;                  /* Changed to flex for horizontal centering */
+    justify-content: center;        /* Centers content horizontally */
+    width: 100%;
+    font-size: 1.5vh;
+    top: 0;
+    position: fixed;                /* Fixed to top */
+    left: 50%;                      /* Centralize header */
+    transform: translateX(-50%);    /* Fine-tuned center */
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.253);
+    text-decoration: none;
+}
+
+
+body {
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white; /* Default text color */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to the top */
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 60px; /* Ensure the container starts lower */
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+    animation: fadeEffect 5s infinite;
+    color: white;
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+
+.back-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    left: 40px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: left;
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: transparent;
+}
+
+.next-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    right: -50px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: fight;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.next-button:hover {
+    color: transparent;
+}
+.typewriter-container {
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 600px;
+    height: 700px;
+    background: #ffffff00;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 1.5s ease-in-out;
+    transform: scale(0.9) translateY(50px);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1) translateY(0);
+}
+
+.card .image {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.card:hover .image img {
+    opacity: 0;
+    transform: translateX(30%);
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: transform 1.5s, opacity 1.5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+    opacity: 0;
+}
+
+.card:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+    opacity: 1;
+}
+
+.card .details .center {
+    padding: 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 2s 0.5s;
+}
+
+.card:hover .details .center {
+    opacity: 1;
+}
+
+.card .details .center p {
+    margin: 15px 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Media Queries for iPad (850px) */
+@media (max-width: 850px) {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .title {
+        font-size: 30px;
+        color: black;
+    }
+    @keyframes fadeEffect {
+        0%, 100% {
+            color: rgba(0, 0, 0, 0.609);
+        }
+        50% {
+            color: rgba(0, 0, 0, 0.788);
+        }
+    }
+
+    .back-button, .next-button {
+        font-size: 12px;
+        left: 20px;  
+        color: black;
+        background-color: white;
+    }
+
+    .next-button {
+        left: 80%;
+        color: black;
+        background-color: white;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card .image img {
+        border-radius: 15px;
+        height: 50%;
+    }
+
+    .card .details .center {
+        padding: 20px;
+    }
+
+    .card .details .center p {
+        font-size: 18px;
+        color: black;
+    }
+}
+/* Media Queries for smaller screens (500px) */
+@media (max-width: 500px) {
+    body {
+        background-color: rgba(0, 0, 0, 0.945); /* Dark background */
+        color: white; /* Light text */
+    }
+
+    .title {
+        font-size: 25px;
+        color: white; /* White title */
+        top: 45px;
+    }
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+
+    .back-button, .next-button {
+        font-size: 10px;
+        left: 10px;
+        color: rgb(255, 255, 255); /* Dark text on buttons */
+        background-color: transparent;
+    }
+
+    .next-button {
+        left: 80%;
+        font-size: 10px;
+        background-color: transparent;
+        color: rgb(255, 255, 255); /* Dark color for the next button */
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+        background-color: rgba(14, 14, 14, 0); /* Light background for cards */
+    }
+
+    .card .image img {
+        height: 45%;
+    }
+
+    .card .details .center {
+        padding: 10px;
+    }
+
+    .card .details .center p {
+        font-size: 16px;
+        color: white; /* White text inside the card */
+    }
+}
+.quote {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: white; /* 글자 색상 */
+    margin-top: 30px; /* 적절히 위 요소들과 간격을 두기 */
+    margin-bottom: 30px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 위에서부터 요소를 배치 */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 요소들이 위에서부터 쌓이도록 설정 */
+    min-height: 100vh; /* 화면 높이를 기준으로 최소 크기 설정 */
+    margin: 0; /* 기본 마진 제거 */
+}
+
+footer {
+    margin-top: auto; /* 이전 요소 아래로 밀려 위치하도록 설정 */
+}
+
+
+

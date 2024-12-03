@@ -1,0 +1,181 @@
+@import url('https://use.typekit.net/chq6xxm.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+header { 
+    z-index: 100;
+    display: flex;                  /* Changed to flex for horizontal centering */
+    justify-content: center;        /* Centers content horizontally */
+    width: 100%;
+    font-size: 1.5vh;
+    top: 0;
+    position: fixed;                /* Fixed to top */
+    left: 50%;                      /* Centralize header */
+    transform: translateX(-50%);    /* Fine-tuned center */
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.253);
+    text-decoration: none;
+}
+
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+    animation: fadeEffect 5s infinite;
+    color: white;
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+input {
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.text-box {
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80%;
+    max-width: 400px;
+    word-wrap: break-word;
+    color: #ffd90000;
+}
+
+.back-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    left: 40px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: left;
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: transparent;
+}
+
+.next-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    right: -50px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: fight;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.next-button:hover {
+    color: transparent;
+}
+
+body {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:rgba(0, 0, 0, 0.945);  /* 핑크색으로 배경 변경 */
+    color: white;
+}
+
+.container {
+    text-align: center;
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 9px;
+}
+
+input {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    background-color: #33333300;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ffffff;
+}
+
+.text-box {
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #33333300;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80%;
+    max-width: 400px;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+

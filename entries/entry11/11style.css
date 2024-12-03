@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://use.typekit.net/chq6xxm.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+header { 
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.5vh;
+  top: 0;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "lexia-mono-variable", sans-serif;
+  font-variation-settings: "wght" 100;
+  font-size: 15px;
+  padding: 10px;
+}
+
+a {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+  animation: fadeEffect 5s infinite;
+  color: white; /* 기본 타이틀 색 */
+}
+
+@keyframes fadeEffect {
+  0%, 100% {
+      color: rgba(255, 255, 255, 0.052);
+  }
+  50% {
+      color: rgba(255, 255, 255, 0.504);
+  }
+}
+
+
+
+
+.back-button {
+  font-family: "lexia-mono-variable", sans-serif;
+  font-variation-settings: "wght" 100;
+  font-size: 15px;
+  position: fixed;
+  top: 70px; 
+  left: 40px; 
+  margin: 0; 
+  width: 200px; 
+  word-wrap: break-word; 
+  line-height: 1.2; 
+  text-align: left;
+  color: white; /* Initial text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.back-button:hover {
+  color: transparent; /* Change text color to transparent on hover */
+}
+
+
+
+.next-button {
+  font-family: "lexia-mono-variable", sans-serif;
+  font-variation-settings: "wght" 100;
+  font-size: 15px;
+  position: fixed;
+  top: 70px; 
+  right: -50px; 
+  margin: 0; 
+  width: 200px; 
+  word-wrap: break-word; 
+  line-height: 1.2; 
+  text-align: fight;
+  color: white; /* Initial text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.next-button:hover {
+  color: transparent;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+}
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('img11/bg1.jpg');
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 30px;
+
+}
+
+.section {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0); /* 투명한 경계선 */
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter h3,
+.letter p {
+  font-family: "lexia-mono-variable", sans-serif;
+  font-variation-settings: "wght" 100;
+  font-size: 15px;
+  text-align: center;
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+}

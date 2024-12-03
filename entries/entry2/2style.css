@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://use.typekit.net/chq6xxm.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+header { 
+    z-index: 100;
+    display: flex;                  /* Changed to flex for horizontal centering */
+    justify-content: center;        /* Centers content horizontally */
+    width: 100%;
+    font-size: 1.5vh;
+    top: 0;
+    position: fixed;                /* Fixed to top */
+    left: 50%;                      /* Centralize header */
+    transform: translateX(-50%);    /* Fine-tuned center */
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.253);
+    text-decoration: none;
+}
+
+
+.font1 {
+    font-family: "Cutive Mono", monospace;
+    word-spacing: -5px;
+    letter-spacing: -1px; 
+    line-height: 1.2; 
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.945); /* 기본 배경색 */
+    color: white; /* 기본 텍스트 색 */
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+    animation: fadeEffect 5s infinite;
+    color: white; /* 기본 타이틀 색 */
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+
+
+
+
+.back-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    left: 40px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: left;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.back-button:hover {
+    color: transparent; /* Change text color to transparent on hover */
+}
+
+
+
+.next-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    right: -50px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: fight;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.next-button:hover {
+    color: transparent;
+}
+.typewriter-container {
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter {
+    font-family: "Cutive Mono", monospace;
+    word-spacing: -2px;
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+    color: #828282;
+    white-space: pre-wrap;
+    overflow: hidden;
+    animation: typing 10s steps(300, end) forwards, blink-caret 0.75s step-end infinite;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    10% {
+        border-color: transparent;
+    }
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* 이미지가 크더라도 넘치는 부분 숨기기 */
+ㄴ
+}
+
+.hidden-image {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 타이핑 애니메이션 */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* 1단계: 모니터/스크린 화면 (기본 상태) */
+body {
+    background-color: rgba(0, 0, 0, 0.945); /* 어두운 배경 */
+    color: white; /* 흰색 텍스트 */
+}
+
+.title {
+    color: white; /* 흰색 타이틀 */
+}
+
+.back-button, .next-button {
+    color: white; /* 흰색 버튼 */
+    background-color: transparent; /* 버튼 배경 투명 */
+}
+
+/* 2단계: 아이패드 화면 (768px 이하) */
+@media screen and (max-width: 800px) {
+    body {
+        background-color: rgba(255, 255, 255, 0.945); /* 흰색 배경 */
+        color: black; /* 검정색 텍스트 */
+    }
+
+    .title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        cursor: pointer;
+        z-index: 10000;
+        animation: fadeEffect 5s infinite;
+        color: black; /* 검정색 타이틀 */
+    }
+    
+    @keyframes fadeEffect {
+        0%, 100% {
+            color: rgba(0, 0, 0, 0.785); /* 애니메이션 시작과 끝에서 검정색 */
+        }
+        50% {
+            color: rgba(0, 0, 0, 0.123); /* 중간에는 약간 어두운 검정 */
+        }
+    }
+    
+    .back-button, .next-button {
+        font-size: 12px;
+        left: 20px;  /* 버튼 위치 조정 */
+        color: black; /* 검정색 버튼 */
+        background-color: white; /* 흰색 배경 */
+    }
+
+    .next-button {
+        left: 80%;
+    }
+
+    .typewriter-container {
+        width: 90%;
+        max-width: 500px;
+        text-align: center; /* 모바일에서는 텍스트 중앙 정렬 */
+    }
+
+    img {
+        max-width: 30%; /* 이미지를 화면에 맞게 조정 */
+    }
+}
+
+/* 3단계: 폰 화면 (480px 이하) */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgba(0, 0, 0, 0.945); /* 다시 어두운 배경 */
+        color: white; /* 흰색 텍스트 */
+    }
+
+    .title {
+        font-size: 25px; /* 타이틀 크기 축소 */
+        top: 45px;
+        left: 50%;
+        color: white; /* 흰색 타이틀 */
+        animation: fadeEffect 5s infinite;
+        color: white; /* 기본 타이틀 색 */
+    }
+    
+    @keyframes fadeEffect {
+        0%, 100% {
+            color: rgba(255, 255, 255, 0.052);
+        }
+        50% {
+            color: rgba(255, 255, 255, 0.504);
+        }
+    }
+    
+    .back-button, .next-button {
+        font-size: 10px;
+        width: 150px; /* 버튼 크기 축소 */
+        color: white; /* 흰색 버튼 */
+        background-color: transparent; /* 투명 배경 */
+    }
+
+    .typewriter-container {
+        max-width: 400px; /* 작은 화면에서는 너비 축소 */
+    }
+
+    img {
+        max-width: 30%; /* 작은 화면에서 이미지를 꽉 채우도록 설정 */
+    }
+}
+.quote {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: white; /* 글자 색상 */
+    margin-top: 60px; /* 적절히 위 요소들과 간격을 두기 */
+    margin-bottom: 40px;
+    position: absolute; /* 절대 위치 */
+    left: 50%; /* 화면의 가로 중앙으로 */
+    transform: translateX(-50%); /* 정확히 중앙으로 이동 */
+}

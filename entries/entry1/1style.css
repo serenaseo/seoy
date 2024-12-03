@@ -1,0 +1,207 @@
+@import url('https://use.typekit.net/chq6xxm.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+header { 
+    z-index: 100;
+    display: flex;                  /* Changed to flex for horizontal centering */
+    justify-content: center;        /* Centers content horizontally */
+    width: 100%;
+    font-size: 1.5vh;
+    top: 0;
+    position: fixed;                /* Fixed to top */
+    left: 50%;                      /* Centralize header */
+    transform: translateX(-50%);    /* Fine-tuned center */
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.253);
+    text-decoration: none;
+}
+
+  
+  
+
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;  
+    min-height: 100%; 
+    z-index: -1;      
+    object-fit: cover; 
+}
+
+.typewriter-container {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.typewriter {
+    font-family: "Cutive Mono", monospace;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    color: #dedede;
+    white-space: pre-wrap;
+    overflow: hidden;
+    animation: typing 10s steps(300, end) forwards, 
+               blink-caret 0.75s step-end infinite;
+
+    display: flex; /* 플렉스 컨테이너 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 세로 시작 지점에서 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    text-align: center;
+    padding-top: 680px;
+
+    position: relative; /* 위치 조정 */
+    transition: opacity 1s ease-out; /* 부드럽게 사라지도록 */
+}
+
+/* 스크롤이 끝나면 사라지게 설정 */
+body.scrolled-to-end .typewriter {
+    opacity: 0; /* 텍스트를 투명하게 */
+    visibility: hidden; /* 보이지 않도록 처리 */
+}
+
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+
+    /* 애니메이션 추가 */
+    animation: fadeEffect 5s infinite; /* 3초 주기로 반복 */
+}
+
+/* 애니메이션 키프레임 정의 */
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052); /* 약한 색 */
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504); /* 진한 색 */
+    }
+}
+
+
+
+.click-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    display: flex; /* 플렉스 컨테이너 */
+    position: fixed; /* 화면에 고정 */
+    bottom: 20px; /* 화면 하단에서 20px 거리 */
+    right: 820px; /* 화면 오른쪽에서 20px 거리 */
+    z-index: 10000; /* 다른 요소들 위에 보이도록 설정 */
+    color: white; /* 텍스트 색상 */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    opacity: 1;  /* Ensure the button is visible */
+    visibility: visible; /* Button visible from the start */
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+}
+
+/* Change text color to transparent on hover */
+.click-button:hover {
+    color: #000000; /* Text color when clicked */
+}
+
+/* Change text color to black when clicked (active state) */
+#click-button:active {
+    color: transparent;/* Text color when clicked */
+}
+
+
+
+
+.next-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    right: 20px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: fight;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.next-button:hover {
+    color: transparent;
+}
+
+
+
+.back-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    left: 40px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: left;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.back-button:hover {
+    color: transparent; /* Change text color to transparent on hover */
+}
+
+.quote {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: white; /* 글자 색상 */
+    margin-top: 30px; /* 적절히 위 요소들과 간격을 두기 */
+    margin-bottom: 70px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 위에서부터 요소를 배치 */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 요소들이 위에서부터 쌓이도록 설정 */
+    min-height: 100vh; /* 화면 높이를 기준으로 최소 크기 설정 */
+    margin: 0; /* 기본 마진 제거 */
+}
+
+footer {
+    margin-top: auto; /* 이전 요소 아래로 밀려 위치하도록 설정 */
+}

@@ -1,0 +1,175 @@
+@import url('https://use.typekit.net/chq6xxm.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+header { 
+    z-index: 100;
+    display: flex;                  /* Changed to flex for horizontal centering */
+    justify-content: center;        /* Centers content horizontally */
+    width: 100%;
+    font-size: 1.5vh;
+    top: 0;
+    position: fixed;                /* Fixed to top */
+    left: 50%;                      /* Centralize header */
+    transform: translateX(-50%);    /* Fine-tuned center */
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.253);
+    text-decoration: none;
+}
+
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+    animation: fadeEffect 5s infinite;
+    color: white;
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+
+
+
+
+
+body {
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white; /* Default text color */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    max-width: 100%;
+    opacity: 0.1; 
+    transition: opacity 0.3s ease; 
+    filter: blur(2px);
+}
+
+img:hover {
+    opacity: 1;
+    filter: blur(0);
+}
+#key {
+    width: 100%;
+    height: auto;
+    top: 400px;
+    right: -90%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#earcuff {
+    width: 40%;
+    height: auto;
+    top: 65%;
+    left: 10%;
+    transform: rotate(-18deg);
+    z-index: 0;
+}
+
+#letter {
+    width: 20%;
+    height: auto;
+    top: 70%;
+    left: 50%;
+    z-index: 3;
+    transform: rotate(15deg);
+}
+
+#travel {
+    width: 20%;
+    height: auto;
+    top: 30%;
+    left: 70%;
+    z-index: 4;
+    transform: rotate(-20deg);
+}
+
+
+
+@media (max-width: 680px) {
+
+    
+    .container {
+      display: flex;
+      flex-direction: row; 
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+  
+    img {
+      position: absolute;
+      max-width: 100%;
+    }
+  
+    #key {
+      width: 250px;
+      height: auto;
+      top: 450px;
+      left: 500px;
+      z-index: 2;
+    }
+  
+    #earcuff {
+        width: 6.5%;  /* 원래 크기의 1/4 */
+        height: auto;  /* 원래 비율에 맞게 자동으로 조정 */
+        top: 20px;
+        left: 48px;
+        transform: rotate(-18deg);
+        size-adjust: 10cm;
+        z-index: 0;
+      }
+
+
+    #letter {
+      width: 15%;
+      height: auto;
+      top: 760px;
+      left: 120px;
+      z-index: 3;
+      transform: rotate(15deg);
+    }
+  
+    #travel {
+      width: 100%;
+      height: auto;
+      top: 400px;
+      left: 100px;
+      z-index: 4;
+      transform: rotate(-20deg);
+    }
+  
+  }
+  

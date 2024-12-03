@@ -1,0 +1,213 @@
+@import url('https://use.typekit.net/chq6xxm.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+header { 
+  z-index: 100;
+  display: flex;                  /* Changed to flex for horizontal centering */
+  justify-content: center;        /* Centers content horizontally */
+  width: 100%;
+  font-size: 1.5vh;
+  top: 0;
+  position: fixed;                /* Fixed to top */
+  left: 50%;                      /* Centralize header */
+  transform: translateX(-50%);    /* Fine-tuned center */
+  font-family: "lexia-mono-variable", sans-serif;
+  font-variation-settings: "wght" 100;
+  font-size: 15px;
+  padding: 10px;                  /* Optional: Add some padding to space it out */
+}
+
+a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.253);
+  text-decoration: none;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white; /* Default text color */
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+  animation: fadeEffect 5s infinite;
+  color: white;
+}
+
+
+@keyframes fadeEffect {
+    0%, 100% {
+        color: rgba(255, 255, 255, 0.052);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0.504);
+    }
+}
+
+.back-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    left: 40px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: left;
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: transparent;
+}
+
+.next-button {
+    font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+    top: 70px; 
+    right: -50px; 
+    margin: 0; 
+    width: 200px; 
+    word-wrap: break-word; 
+    line-height: 1.2; 
+    text-align: fight;
+    color: white; /* Initial text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.next-button:hover {
+    color: transparent;
+}
+
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  padding-top: 10%;  /* 타이틀과 그리드 사이의 간격을 더 넓히기 위해 사용 */
+  padding-bottom: 5%;
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 17.5vw;
+  height: 50vh;
+  cursor: pointer;
+  margin: 10px;
+ 
+ 
+}
+
+.flip-card p {
+  width: 75%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: opacity 0.8s;
+}
+
+.flip-card-front {
+  background-color: #19191917;
+  color: rgb(70, 70, 70);
+  
+}
+
+.flip-card-back {
+  background-color: rgb(255, 255, 255);
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.flip-card.flipped .flip-card-front {
+  opacity: 0;
+}
+
+.flip-card.flipped .flip-card-back {
+  opacity: 1;
+}
+
+.green{
+  background-color: rgba(254, 254, 254, 0.111);
+  color: rgba(255, 255, 255, 0.545);
+  font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+}
+
+
+.pink{
+  background-color: rgb(0, 0, 0);
+  color: rgb(70, 70, 70);
+  font-family: "lexia-mono-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: 15px;
+    position: fixed;
+}
+
+
+/* Media Query for Phones */
+@media only screen and (max-width: 767px) {
+  .title{
+      padding-top: 7%;
+      font-size: 25px;
+  }
+
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 5%;
+  }
+
+  .flip-card {
+      width: 40vw;
+      height: 30vh;
+  }
+
+  .flip-card p {
+      width: 90%;
+  }
+}
